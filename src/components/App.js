@@ -6,6 +6,8 @@ import Statistics from "./Statistics/Statistics";
 import statisticalData from "../data/statistical-data.json";
 import FriendList from "./FriendList/FriendList";
 import friends from "../data/friends.json";
+import TransactionHistory from './TransactionHistory/TransactionHistory'
+import transactions from '../data/transactions.json'
 
 const mainRootRef = document.querySelector("#root");
 const AppContainerStyles = {
@@ -29,6 +31,7 @@ function App() {
             />
             <Statistics title="Upload stats" stats={statisticalData} />
             <FriendList friends={friends} />
+            <TransactionHistory transactions={transactions}/>
         </section>
     );
 }

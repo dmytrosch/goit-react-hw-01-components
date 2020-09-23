@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./FriendList.module.css";
+import PropTypes from "prop-types";
 
 function FriendList({ friends }) {
     return (
@@ -29,5 +30,21 @@ function FriendList({ friends }) {
         </section>
     );
 }
+
+FriendList.defaultProps = {
+    avatar: "https://www.flaticon.com/svg/static/icons/svg/747/747376.svg",
+    isOnline: false,
+};
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(
+        PropTypes.exact({
+            avatar: PropTypes.string,
+            name: PropTypes.string.isRequired,
+            isOnline: PropTypes.bool,
+            id: PropTypes.number.isRequired,
+        })
+    ),
+};
 
 export default FriendList;

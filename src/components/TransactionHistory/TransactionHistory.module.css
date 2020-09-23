@@ -1,0 +1,33 @@
+.container {
+    width: 700px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table {
+    min-width: 100%;
+}
+
+.tableElement {
+    width: 33%;
+    height: 45px;
+}
+
+.headerItem {
+    composes: tableElement;
+    background-color: rgb(74, 213, 231);
+    color: white;
+    text-transform: uppercase;
+}
+.tableCell {
+    composes: tableElement;
+    color: grey;
+    text-align: center;
+}
+
+.tableRow {
+    background-color: #ffffff;
+}
+
+.tableRow:nth-child(2n) {
+    background-color: rgb(145, 233, 214);
+}

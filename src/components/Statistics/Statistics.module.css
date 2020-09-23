@@ -6,6 +6,7 @@
     flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.29);
+    margin-bottom: 20px;
 }
 
 .title {
