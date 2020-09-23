@@ -6,7 +6,7 @@ import randomColor from "../../js/randomColor";
 function Statisctics(props) {
     const { title, stats } = props;
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             {title && <h2 className={styles.title}>{title}</h2>}
             <ul className={styles.statsList}>
                 {stats.map((el) => {
@@ -22,16 +22,19 @@ function Statisctics(props) {
                     );
                 })}
             </ul>
-        </div>
+        </section>
     );
 }
 
 Statisctics.propTypes = {
     title: PropTypes.string,
-    stats: PropTypes.exact({
-        label: PropTypes.string.isRequired,
-        percentage: PropTypes.number.isRequired,
-    }).isRequired,
+    stats: PropTypes.arrayOf(
+        PropTypes.exact({
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+            id: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 };
 
 export default Statisctics;

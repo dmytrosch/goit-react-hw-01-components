@@ -6,7 +6,7 @@ function Profile(props) {
     const { name, tag, location, avatar, stats } = props;
     const { views, followers, likes } = stats;
     return (
-        <div className={styles.container}>
+        <section className={styles.container}>
             <img
                 className={styles.avatarImg}
                 src={avatar}
@@ -30,7 +30,7 @@ function Profile(props) {
                     <p className={styles.statItemValue}>{likes}</p>
                 </li>
             </ul>
-        </div>
+        </section>
     );
 }
 
