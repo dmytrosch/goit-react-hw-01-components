@@ -42,7 +42,6 @@
     height: 20%;
     display: flex;
     justify-content: space-between;
-    list-style: none;
 }
 
 .statsItem {
@@ -54,18 +53,18 @@
     align-items: center;
     border: 1px transparent;
 }
-.statsItem:hover{
+.statsItem:hover {
     border: 1px rgb(139, 139, 221) solid;
     cursor: pointer;
 }
 
-.statItemKey{
+.statItemKey {
     composes: anotherText;
     font-size: 13px;
     margin-bottom: 5px;
 }
 
-.statItemValue{
+.statItemValue {
     composes: name;
     font-size: 15px;
     font-weight: 600;
